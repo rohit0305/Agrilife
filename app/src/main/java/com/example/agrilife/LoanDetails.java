@@ -16,6 +16,7 @@ import android.widget.Toast;
 import com.example.agrilife.model_classes.FinancingPlansModel;
 import com.example.agrilife.model_classes.LoanCollateralClass;
 import com.example.agrilife.model_classes.insuranceModel;
+import com.example.agrilife.model_classes.modelStatusLoan;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -31,6 +32,7 @@ public class LoanDetails extends AppCompatActivity {
     TextView Loan_alreadyApplied;
     private FinancingPlansModel model;
     private FirebaseFirestore firebaseFirestore;
+    private modelStatusLoan modelS;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,8 +86,10 @@ public class LoanDetails extends AppCompatActivity {
 //                firebaseFirestore.collection("farmer_policies").collection(uidi).document(model.getPlanId()).set(model);
                 LoanCollateralClass collateralClass=new LoanCollateralClass();
                 FinancingPlansModel upload=new FinancingPlansModel(model.getAmount(),model.getPlanName(),0.0d,collateralClass,model.getInterestRate(),model.getReturnPeriod_inMonths(),0.2d);
+                modelS=new modelStatusLoan(upload,"pending");
 
-                firebaseFirestore.collection("farmer_policies").document(uidi).collection("loan_opted").document(model.getPlanName()).set(upload);
+
+                firebaseFirestore.collection("farmer_policies1").document(uidi).collection("loan_opted1").document(model.getPlanName()).set(modelS);
 
 
                 Toast.makeText(getApplicationContext(), " Opted !!! ", Toast.LENGTH_SHORT).show();

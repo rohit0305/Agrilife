@@ -105,6 +105,8 @@ public class insuranceModel implements Serializable {
         this.applied_date = applied_date;
     }
 
+
+
     public insuranceModel(String policyName, String policyDescription, int policyCover, String targetEntity, int premiumLowerBound, double claimSettlementRatio, double amountSettlementRatio, String planId, int waitingPeriodInDays, int noClaimBonus, String applied_date) {
         this.policyName = policyName;
         this.policyDescription = policyDescription;

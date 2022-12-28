@@ -15,6 +15,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.agrilife.model_classes.insuranceModel;
+
+import com.example.agrilife.model_classes.modelStatusInsurance;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -31,6 +33,7 @@ public class Insurance_details extends AppCompatActivity {
     TextView applied_already;
     private insuranceModel model;
     private  FirebaseFirestore firebaseFirestore;
+    private modelStatusInsurance modelS;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -98,7 +101,8 @@ public class Insurance_details extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 //                firebaseFirestore.collection("farmer_policies").collection(uidi).document(model.getPlanId()).set(model);
-                firebaseFirestore.collection("farmer_policies").document(uidi).collection("policies_opted").document(model.getPlanId()).set(model);
+                modelS=new modelStatusInsurance(model,"pending");
+                firebaseFirestore.collection("farmer_policies1").document(uidi).collection("policies_opted1").document(model.getPlanId()).set(modelS);
 
 
                 Toast.makeText(getApplicationContext(), " Applied !!! ", Toast.LENGTH_SHORT).show();
@@ -107,7 +111,6 @@ public class Insurance_details extends AppCompatActivity {
                 apply.setVisibility(View.INVISIBLE);
             }
         });
-
     }
     @Override
     public void onBackPressed()
