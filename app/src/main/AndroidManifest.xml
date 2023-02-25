@@ -18,6 +18,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AgriLife">
         <activity
+            android:name=".SelectLangActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".apply_details"
             android:exported="false" />
         <activity
@@ -43,11 +56,6 @@
         <activity
             android:name=".newLogin"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".LoginActivity"

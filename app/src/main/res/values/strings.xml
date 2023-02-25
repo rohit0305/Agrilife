@@ -20,4 +20,15 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="select_language_prompt">Select a language:</string>
+    <string name="proceed_button_text">Proceed</string>
+    <string-array name="languages_array">
+        <item>Select_Language</item>
+        <item>Hindi</item>
+        <item>English</item>
+        <item>Marathi</item>
+    </string-array>
+    <string name="selected_language_key">selected_language</string>
+
+
 </resources>
