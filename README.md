@@ -9,7 +9,6 @@ Important thing about our app is, many crop - insurance plans offered have an ob
 - check [repl](https://replit.com/join/nyucmmwtkx-saymyname002) which is hosting the API for crop recommendation
 - Find APK of android project = [link](https://drive.google.com/file/d/1oz4rDE7mR3GTqYSByQpml0xftGPcAUSu/view?usp=sharing)
 - Feel free to see internals of app from repo / cloning repo.
-- Demo Video [Link](https://drive.google.com/file/d/1uhJdgKmB-p74CaHCH7WHpf3ZJhvCtPgl/view?usp=sharing) of our Application 
 
 
 ## Features
